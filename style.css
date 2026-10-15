@@ -463,6 +463,12 @@ select:focus-visible {
     text-align: center;
 }
 
+
+.booking-page .section-heading h1 span {
+    color: var(--gold);
+}
+
+
 .booking-form {
     width: 100%;
     max-width: 760px;
