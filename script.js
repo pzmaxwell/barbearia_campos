@@ -2,7 +2,6 @@
 "use strict";
 
 // MENU PARA CELULAR
-
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
@@ -11,7 +10,6 @@ if (menuToggle && menu) {
         const aberto = menu.classList.toggle("open");
 
         menuToggle.setAttribute("aria-expanded", String(aberto));
-
         menuToggle.setAttribute(
             "aria-label",
             aberto ? "Fechar menu" : "Abrir menu"
@@ -20,7 +18,7 @@ if (menuToggle && menu) {
         menuToggle.textContent = aberto ? "×" : "☰";
     });
 
-    // Fecha o menu após clicar em uma opção
+    // Fecha o menu depois que uma opção é selecionada.
     menu.querySelectorAll("a").forEach(function (link) {
         link.addEventListener("click", function () {
             menu.classList.remove("open");
@@ -30,7 +28,7 @@ if (menuToggle && menu) {
         });
     });
 
-    // Fecha o menu se a tela mudar para o tamanho de computador
+    // Fecha o menu quando a tela volta ao tamanho de computador.
     window.addEventListener("resize", function () {
         if (window.innerWidth > 760) {
             menu.classList.remove("open");
@@ -41,8 +39,7 @@ if (menuToggle && menu) {
     });
 }
 
-// ATUALIZA O ANO AUTOMATICAMENTE
-
+// ATUALIZA O ANO DO RODAPÉ
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
