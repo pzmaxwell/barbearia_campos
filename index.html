@@ -1,53 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Cortes de qualidade, estilo e atendimento personalizado. Agende seu horário.">
-
-    <title>Campos | Barbearia Premium</title>
-
-    <!-- Arquivo de estilos -->
+    <meta name="theme-color" content="#0b0b0b">
+    <meta name="description" content="Barbearia Campos: estilo, precisão e atendimento personalizado. Agende seu horário.">
+    <title>Barbearia Campos | Estilo e personalidade</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Ícones e interações serão configurados depois -->
     <script src="script.js" defer></script>
 </head>
-
 <body>
-
-    <!-- CABEÇALHO -->
     <header class="header">
-        <a href="#inicio" class="logo">
+        <a href="#inicio" class="logo" aria-label="Barbearia Campos, início">
             CAMPOS<span>BARBEARIA</span>
         </a>
 
-        <nav class="nav" id="menu">
+        <nav class="nav" id="menu" aria-label="Navegação principal">
             <a href="#inicio">Início</a>
-            <a href="#sobre">A barbearia</a>
             <a href="#servicos">Serviços</a>
             <a href="#galeria">Galeria</a>
             <a href="#contato">Contato</a>
         </nav>
 
-        <a href="#agendamento" class="btn btn-outline">
-            Agendar horário
-        </a>
+        <div class="header-actions">
+            <a href="agendamento.html" class="btn btn-gold">Agende aqui</a>
+        </div>
 
-        <button class="menu-toggle"
-                id="menu-toggle"
-                aria-label="Abrir menu"
-                aria-expanded="false"
-                aria-controls="menu">
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu">
             ☰
         </button>
     </header>
 
     <main>
-
-        <!-- APRESENTAÇÃO -->
+        <!-- CAPA PRINCIPAL -->
         <section class="hero" id="inicio">
             <div class="hero-content">
                 <p class="eyebrow">ESTILO • PRECISÃO • PERSONALIDADE</p>
@@ -63,77 +55,83 @@
                 </p>
 
                 <div class="hero-actions">
-                    <a href="#agendamento" class="btn btn-gold">
-                        Agendar meu horário
+                    <a href="agendamento.html" class="btn btn-gold">
+                        Agende aqui
                     </a>
 
-                    <a href="#servicos" class="text-link">
-                        Conhecer serviços ↗
+                    <a
+                        href="https://wa.me/5517991601154?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20os%20servi%C3%A7os%20da%20Barbearia%20Campos."
+                        class="btn btn-whatsapp"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        WhatsApp ↗
                     </a>
                 </div>
             </div>
 
-            <div class="hero-decoration" aria-hidden="true">
-                <span>CB</span>
-            </div>
-
-            <p class="hero-caption">
-                EXCELÊNCIA EM CADA DETALHE
-            </p>
-        </section>
-
-        <!-- SOBRE A BARBEARIA -->
-        <section class="section about" id="sobre">
-            <div class="section-heading">
-                <p class="eyebrow">NOSSA ESSÊNCIA</p>
-                <h2>Tradição no corte.<br><span>Atitude no estilo.</span></h2>
-            </div>
-
-            <div class="about-content">
-                <p>
-                    Um espaço dedicado a quem valoriza o cuidado pessoal,
-                    o bom atendimento e a atenção aos detalhes.
-                    Aqui, cada cliente merece uma experiência única.
-                </p>
-
-                <a href="#contato" class="text-link">
-                    Venha conhecer ↗
-                </a>
-            </div>
+            <p class="hero-caption">EXCELÊNCIA EM CADA DETALHE</p>
         </section>
 
         <!-- SERVIÇOS -->
         <section class="section services" id="servicos">
             <div class="section-heading">
-                <p class="eyebrow">O QUE FAZEMOS</p>
+                <p class="eyebrow">NOSSOS SERVIÇOS</p>
                 <h2>Seu próximo visual<br><span>começa aqui.</span></h2>
+                <p>Escolha seu serviço e consulte os horários disponíveis.</p>
             </div>
 
             <div class="service-grid">
                 <article class="service-card">
-                    <span class="service-number">01</span>
-                    <h3>Corte masculino</h3>
-                    <p>Do clássico ao moderno, com acabamento preciso.</p>
+                    <h3>Corte</h3>
+                    <p>Corte masculino com acabamento cuidadoso.</p>
                     <p class="service-price">R$ 35,00</p>
                 </article>
 
                 <article class="service-card">
-                    <span class="service-number">02</span>
                     <h3>Barba</h3>
                     <p>Modelagem e cuidado para valorizar seu rosto.</p>
+                    <p class="service-price">R$ 25,00</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Sobrancelha navalhada</h3>
+                    <p>Acabamento para complementar seu visual.</p>
+                    <p class="service-price">R$ 10,00</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Limpeza de pele</h3>
+                    <p>Cuidado e limpeza para a pele.</p>
+                    <p class="service-price">R$ 30,00</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Hidratação capilar</h3>
+                    <p>Tratamento para cuidar dos fios.</p>
                     <p class="service-price">R$ 20,00</p>
                 </article>
 
                 <article class="service-card">
-                    <span class="service-number">03</span>
-                    <h3>Corte + barba</h3>
-                    <p>Uma experiência completa para renovar o visual.</p>
-                    <p class="service-price">R$ 50,00</p>
+                    <h3>Alisamento</h3>
+                    <p>Procedimento químico para alisar os fios.</p>
+                    <p class="service-price">R$ 60,00</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Luzes</h3>
+                    <p>Procedimento para iluminar o visual.</p>
+                    <p class="service-price">R$ 100,00</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Platinado</h3>
+                    <p>Transformação de cor para um visual marcante.</p>
+                    <p class="service-price">R$ 100,00</p>
                 </article>
             </div>
 
             <p class="section-note">
-                Consulte os serviços e valores atualizados pelo WhatsApp.
+                Os valores são os cadastrados nesta versão do site.
             </p>
         </section>
 
@@ -168,31 +166,33 @@
             </div>
 
             <p class="section-note">
-                As imagens são referências provisórias.
-                Depois, podemos inserir fotos reais da barbearia.
+                As imagens são referências provisórias. Podemos substituí-las
+                por fotos reais da Barbearia Campos.
             </p>
         </section>
 
-        <!-- AGENDAMENTO -->
-        <section class="booking" id="agendamento">
+        <!-- CHAMADA PARA AGENDAMENTO -->
+        <section class="booking">
             <p class="eyebrow">SEU PRÓXIMO CORTE</p>
-
             <h2>Seu horário.<br><span>Seu momento.</span></h2>
+            <p>Escolha seus serviços ou fale diretamente com a barbearia.</p>
 
-            <p>
-                Entre em contato e consulte os horários disponíveis.
-            </p>
+            <div class="booking-actions">
+                <a href="agendamento.html" class="btn btn-gold">
+                    Agende aqui
+                </a>
 
-            <a
-                class="btn btn-gold"
-                href="https://wa.me/5517991601154?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio."
-                target="_blank"
-                rel="noopener noreferrer">
-                Agendar pelo WhatsApp ↗
-            </a>
+                <a
+                    href="https://wa.me/5517991601154?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio."
+                    class="btn btn-whatsapp"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    WhatsApp ↗
+                </a>
+            </div>
         </section>
 
-        <!-- LOCALIZAÇÃO E CONTATO -->
+        <!-- CONTATO E LOCALIZAÇÃO -->
         <section class="section contact" id="contato">
             <div class="section-heading">
                 <p class="eyebrow">ENCONTRE-NOS</p>
@@ -203,36 +203,40 @@
                 <div>
                     <h3>Endereço</h3>
                     <p>Rua Aracajus, 205</p>
-                    <p>São Cosme - Votuporanga — SP</p>
+                    <p>São Cosme — Votuporanga — SP</p>
                 </div>
 
                 <div>
                     <h3>Funcionamento</h3>
-                    <p>Segunda a sábado</p>
-                    <p>Consulte os horários disponíveis</p>
+                    <p>Terça a sexta: 08h–12h e 13h30–18h</p>
+                    <p>Sábado: 08h–12h e 13h30–19h</p>
+                    <p>Domingo: 08h–12h e 13h30–16h</p>
+                    <p>Segunda-feira: fechado</p>
                 </div>
 
                 <div>
                     <h3>Contato</h3>
-                    <p>WhatsApp da barbearia</p>
-                    <a href="#agendamento" class="text-link">
-                        Fale conosco ↗
+                    <p>Fale com a Barbearia Campos pelo WhatsApp.</p>
+                    <a
+                        href="https://wa.me/5517991601154"
+                        class="btn btn-outline"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Abrir WhatsApp ↗
                     </a>
                 </div>
             </div>
 
             <a
-              class="btn btn-outline"
-              href="https://www.google.com/maps/search/?api=1&query=Rua+Aracajus%2C+205%2C+S%C3%A3o+Cosme%2C+Votuporanga%2C+SP"
-              target="_blank"
-              rel="noopener noreferrer">
-              Ver localização no mapa ↗
+                class="btn btn-outline"
+                href="https://www.google.com/maps/search/?api=1&query=Rua+Aracajus%2C+205%2C+S%C3%A3o+Cosme%2C+Votuporanga%2C+SP"
+                target="_blank"
+                rel="noopener noreferrer">
+                Ver localização no mapa ↗
             </a>
         </section>
-
     </main>
 
-    <!-- RODAPÉ -->
     <footer class="footer">
         <a href="#inicio" class="logo">
             CAMPOS<span>BARBEARIA</span>
@@ -245,6 +249,6 @@
             Todos os direitos reservados.
         </p>
     </footer>
-
 </body>
 </html>
+
