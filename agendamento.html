@@ -2,102 +2,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#101010">
-    <meta name="description" content="Escolha seus serviços e solicite um horário na Barbearia Campos.">
-
-    <title>Agendamento | Barbearia Campos</title>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="agendamento.js" defer></script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#111111">
+  <meta name="description" content="Escolha seus serviços e solicite um horário na Barbearia Campos.">
+  <title>Agendamento | Barbearia Campos</title><link rel="stylesheet" href="style.css"><script src="agendamento.js" defer></script>
 </head>
-<body class="booking-page-body">
-   
-<header class="header">
-    <a class="logo" href="index.html">
-        CAMPOS<span>BARBEARIA</span>
-    </a>
-
-    <a class="btn btn-outline" href="index.html">
-        Voltar ao início
-    </a>
-</header>
-
-
-    <main class="booking-page">
-        <div class="section-heading">
-            <p class="eyebrow">SUA EXPERIÊNCIA COMEÇA AQUI</p>
-            <h1>Agende seu <span>horário.</span></h1>
-            <p>Escolha os serviços, confira o tempo estimado e selecione uma data.</p>
-        </div>
-
-        <form id="booking-form" class="booking-form">
-            <h2>01. Escolha os serviços</h2>
-            <p class="form-help">Você pode selecionar mais de um serviço.</p>
-
-            <div id="service-list" class="service-list"></div>
-
-            <div class="booking-total">
-                <div>
-                    <span>Tempo estimado</span>
-                    <strong id="total-duration">0 min</strong>
-                </div>
-
-                <div>
-                    <span>Valor total</span>
-                    <strong id="total-price">R$ 0,00</strong>
-                </div>
-            </div>
-
-            <h2>02. Escolha o dia e o horário</h2>
-
-            <label for="booking-date">Data do atendimento</label>
-            <input
-                type="date"
-                id="booking-date"
-                name="data"
-                required>
-
-            <label for="booking-time">Horário pretendido</label>
-            <select id="booking-time" name="horario" required>
-                <option value="">Selecione os serviços e a data</option>
-            </select>
-
-            <h2>03. Seus dados</h2>
-
-            <label for="customer-name">Nome completo</label>
-            <input
-                id="customer-name"
-                name="nome"
-                type="text"
-                autocomplete="name"
-                maxlength="100"
-                required>
-
-            <label for="customer-phone">WhatsApp com DDD</label>
-            <input
-                id="customer-phone"
-                name="telefone"
-                type="tel"
-                autocomplete="tel"
-                maxlength="20"
-                placeholder="Ex.: (17) 99999-9999"
-                required>
-
-            <button class="btn btn-gold" type="submit">
-                Enviar solicitação pelo WhatsApp
-            </button>
-
-            <p id="booking-message" role="status" aria-live="polite"></p>
-        </form>
-    </main>
-
-    <footer class="footer">
-        <a class="logo" href="index.html">
-            CAMPOS<span>BARBEARIA</span>
-        </a>
-        <p>© <span id="year">2026</span> Barbearia Campos.</p>
-    </footer>
+<body class="booking-body">
+  <header class="site-header booking-header">
+    <a class="wordmark" href="inicio.html">CAMPOS<span>.</span><small>CABELO &amp; BARBA</small></a>
+    <a class="profile-link" href="perfil.html"><span class="profile-icon">♙</span><span>Meu perfil</span></a>
+  </header>
+  <main class="booking-shell">
+    <div class="booking-topline"><a class="back-link" href="inicio.html">← Voltar ao site</a><span>AGENDAMENTO ONLINE</span></div>
+    <div class="step-progress" aria-label="Progresso do agendamento"><span class="progress-segment active"></span><span class="progress-segment"></span><span class="progress-segment"></span></div>
+    <div class="step-labels"><span class="current-step-label">01 / SERVIÇOS</span><span id="step-counter">ETAPA 1 DE 3</span></div>
+    <section class="booking-step active" data-step="1">
+      <div class="step-heading"><p class="eyebrow">COMECE POR AQUI</p><h1>O que vamos <span>fazer?</span></h1><p>Escolha um ou mais serviços para montar sua experiência.</p></div>
+      <div id="service-list" class="booking-service-list"></div>
+      <div class="selection-summary"><div><span id="selected-count">Nenhum serviço selecionado</span><strong id="total-duration">0 min</strong><small>Tempo estimado</small></div><div class="summary-price"><strong id="total-price">R$ 0,00</strong><small>Valor total</small></div></div>
+      <div class="step-footer"><span class="muted-note">Você poderá revisar tudo antes de concluir.</span><button class="btn btn-gold" id="to-step-2" type="button" disabled>Escolher dia e horário ↗</button></div>
+    </section>
+    <section class="booking-step" data-step="2" hidden>
+      <div class="step-heading"><p class="eyebrow">ENCONTRE SEU MOMENTO</p><h1>Quando fica <span>melhor?</span></h1><p>Escolha uma data e depois um dos horários disponíveis.</p></div>
+      <div class="calendar-toolbar"><button class="calendar-arrow" id="previous-week" type="button" aria-label="Semana anterior">←</button><strong id="calendar-range">Esta semana</strong><button class="calendar-arrow" id="next-week" type="button" aria-label="Próxima semana">→</button></div>
+      <div id="week-days" class="week-days" aria-label="Escolha o dia"></div>
+      <p id="date-hint" class="date-hint">Selecione uma data para consultar os horários.</p>
+      <div class="time-heading"><h2>Horários</h2><span id="selected-date-label">Nenhum dia selecionado</span></div>
+      <div id="time-slots" class="time-slots"><p class="empty-slots">Escolha um dia para ver os horários.</p></div>
+      <p class="availability-note"><span class="legend-dot available-dot"></span> Horário exibido para seleção <span class="legend-dot selected-dot"></span> Seu horário escolhido</p>
+      <div class="step-footer"><button class="btn btn-outline" id="back-to-step-1" type="button">← Voltar aos serviços</button><button class="btn btn-gold" id="to-step-3" type="button" disabled>Revisar agendamento ↗</button></div>
+    </section>
+    <section class="booking-step" data-step="3" hidden>
+      <div class="step-heading"><p class="eyebrow">QUASE LÁ</p><h1>Confira os <span>detalhes.</span></h1><p>Preencha ou confirme seus dados para enviar a solicitação.</p></div>
+      <div id="booking-review" class="booking-review"></div>
+      <form id="booking-form" class="booking-customer-form">
+        <div class="form-two-columns"><div><label for="customer-name">Nome completo</label><input id="customer-name" name="name" autocomplete="name" maxlength="100" required></div><div><label for="customer-phone">WhatsApp com DDD</label><input id="customer-phone" name="phone" type="tel" autocomplete="tel" maxlength="20" required></div></div>
+        <label class="consent-line"><input id="consent" type="checkbox" required><span>Concordo em usar esses dados para tratar desta solicitação de agendamento.</span></label>
+        <p class="privacy-note">Nesta versão inicial, seus dados de perfil ficam salvos apenas neste navegador. A reserva ainda não é gravada em um banco de dados compartilhado.</p>
+        <div class="step-footer"><button class="btn btn-outline" id="back-to-step-2" type="button">← Voltar ao horário</button><button class="btn btn-gold" type="submit">Enviar solicitação pelo WhatsApp ↗</button></div>
+      </form>
+    </section>
+    <section class="booking-step" data-step="4" hidden>
+      <div class="confirmation-mark">✓</div><p class="eyebrow">SOLICITAÇÃO PREPARADA</p><h1>Vamos confirmar <span>com você.</span></h1>
+      <p class="confirmation-copy">Seu resumo foi preparado para enviar pelo WhatsApp. O horário só estará confirmado depois que a barbearia responder. Esta página ainda não bloqueia horários automaticamente.</p>
+      <div id="confirmation-summary" class="booking-review"></div>
+      <a id="confirmation-whatsapp" class="btn btn-gold full-width" href="https://wa.me/5517991601154" target="_blank" rel="noopener noreferrer">Continuar no WhatsApp ↗</a>
+      <a class="text-link confirmation-home" href="inicio.html">Voltar para a barbearia</a>
+    </section>
+    <p class="booking-footnote">BARBEARIA CAMPOS · CABELO &amp; BARBA</p>
+  </main>
 </body>
 </html>
