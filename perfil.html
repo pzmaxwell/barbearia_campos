@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#111111">
+  <title>Meu perfil | Barbearia Campos</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body class="site-body">
+  <header class="site-header"><a class="wordmark" href="inicio.html">CAMPOS<span>.</span><small>CABELO &amp; BARBA</small></a><a class="btn btn-outline btn-small" href="inicio.html">Voltar ao site</a></header>
+  <main class="profile-page">
+    <p class="eyebrow">ÁREA DO CLIENTE</p><h1>Meu <span>perfil.</span></h1>
+    <p class="profile-intro">Salve seus dados neste dispositivo para não precisar digitá-los em cada visita.</p>
+    <form id="profile-form" class="profile-form">
+      <label for="profile-name">Nome completo</label><input id="profile-name" name="name" autocomplete="name" maxlength="100" required>
+      <label for="profile-phone">WhatsApp com DDD</label><input id="profile-phone" name="phone" type="tel" autocomplete="tel" maxlength="20" required>
+      <label for="profile-email">E-mail (opcional)</label><input id="profile-email" name="email" type="email" autocomplete="email" maxlength="150">
+      <button class="btn btn-gold" type="submit">Salvar meus dados</button><p id="profile-message" class="status-message" role="status" aria-live="polite"></p>
+    </form>
+    <section class="profile-history"><h2>Meus agendamentos</h2><p>O histórico compartilhado será ativado quando conectarmos o banco de dados. Por enquanto, nenhuma reserva é armazenada em um servidor.</p></section>
+  </main>
+  <footer class="site-footer"><p>© <span data-year></span> Barbearia Campos.</p><a href="agendamento.html">Agendar horário</a></footer>
+</body>
+</html>
