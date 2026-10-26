@@ -2,13 +2,68 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 :root{--black:#111110;--black-2:#191918;--panel:#20201e;--gold:#d6ad59;--gold-light:#f0d99c;--cream:#f4efe6;--paper:#fbf8f2;--ink:#22211f;--muted:#a7a39b;--line:rgba(255,255,255,.12);--radius:18px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;font-family:'DM Sans',Arial,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}img{max-width:100%;display:block}.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:var(--gold);margin:0 0 16px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:50px;padding:0 23px;border:1px solid transparent;border-radius:7px;font-weight:700;font-size:.9rem;cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s ease,box-shadow .2s ease}.btn:hover{transform:translateY(-2px)}.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #6cb9ed;outline-offset:3px}.btn:disabled{opacity:.38;cursor:not-allowed;transform:none}.btn-gold{background:var(--gold);color:#171512}.btn-gold:hover{background:var(--gold-light);box-shadow:0 8px 24px #d6ad5928}.btn-dark{background:#171715;color:#fff}.btn-light{border-color:#c5bdaE;background:#ffffff75;color:#24211c}.btn-outline{border-color:rgba(255,255,255,.25);color:#fff;background:transparent}.btn-small{min-height:40px;padding:0 16px;font-size:.8rem}.text-link{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.9rem}.text-link:hover{color:var(--gold)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;font-family:'DM Sans',Arial,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}img{max-width:100%;display:block}.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:var(--gold);margin:0 0 16px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:50px;padding:0 23px;border:1px solid transparent;border-radius:7px;font-weight:700;font-size:.9rem;cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s ease,box-shadow .2s ease}.btn:hover{transform:translateY(-2px)}.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #6cb9ed;outline-offset:3px}
+.btn:disabled{opacity:.38;cursor:not-allowed;transform:none}
+.btn-gold{background:var(--gold);color:#171512}.btn-gold:hover{background:var(--gold-light);box-shadow:0 8px 24px #d6ad5928}.btn-dark{background:#171715;color:#fff}.btn-light{border-color:#c5bdaE;background:#ffffff75;color:#24211c}.btn-outline{border-color:rgba(255,255,255,.25);color:#fff;background:transparent}.btn-small{min-height:40px;padding:0 16px;font-size:.8rem}.text-link{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.9rem}
+.text-link:hover{color:var(--gold)}
 /* Capa clara */
-.cover-body{background:var(--cream);color:var(--ink);min-height:100vh}.cover{min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:50px 22px 76px;background:radial-gradient(ellipse at 50% 40%,#fffdf8 0%,#f4efe6 58%,#e9dfcf 100%)}.cover:before{content:"";position:absolute;inset:22px;border:1px solid #b89b5b70;pointer-events:none}.cover:after{content:"";position:absolute;width:620px;height:620px;border:1px solid #b99b5b38;border-radius:50%;left:50%;top:46%;transform:translate(-50%,-50%);pointer-events:none}.cover-orbit{position:absolute;border:1px solid #b99b5b30;border-radius:50%;pointer-events:none}.orbit-one{width:760px;height:760px}.orbit-two{width:920px;height:920px}.cover-content{position:relative;z-index:1;width:min(100%,620px);text-align:center;display:flex;align-items:center;flex-direction:column}.cover-logo-wrap{width:min(100%,340px);aspect-ratio:1.5;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:4px;margin-bottom:22px;box-shadow:0 18px 50px #211b1218;background:#080807}.cover-logo{width:100%;height:100%;object-fit:contain}.cover-content .eyebrow{color:#8a6928;margin-bottom:12px}.cover h1,.hero-section h1,.section-intro h2,.gallery-heading h2,.booking-banner h2,.contact-section h2,.profile-page h1,.step-heading h1,.booking-step>h1{font-family:'Playfair Display',Georgia,serif;font-weight:600;letter-spacing:-.045em;line-height:1.02}.cover h1{font-size:clamp(3rem,8vw,5.7rem);margin:0}.cover h1 span{color:#96702b}.cover-copy{margin:18px 0 27px;color:#6e675c}.cover-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.cover-social{display:flex;gap:13px;align-items:center;margin-top:23px;font-size:.88rem;font-weight:600}.cover-social a{border-bottom:1px solid #a58a4d60;padding-bottom:3px}.cover-note{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:#8c8579;margin:25px 0 0}.cover-bottom{position:absolute;z-index:2;left:38px;right:38px;bottom:27px;display:flex;justify-content:space-between;align-items:center;color:#83765c;font-size:.65rem;letter-spacing:.15em}.cover-bottom span:first-child{font-family:Georgia,serif;font-size:1.2rem;color:#9a762f}
-/* Cabeçalho e site principal */
-.site-body{background:var(--black);color:#f8f5ee}.site-header{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 clamp(20px,5vw,76px);background:#111110f2;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(14px)}
+.cover-body{background:var(--cream);color:var(--ink);min-height:100vh}.cover{min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:50px 22px 76px;background:radial-gradient(ellipse at 50% 40%,#fffdf8 0%,#f4efe6 58%,#e9dfcf 100%)}.cover:before{content:"";position:absolute;inset:22px;border:1px solid #b89b5b70;pointer-events:none}.cover:after{content:"";position:absolute;width:620px;height:620px;border:1px solid #b99b5b38;border-radius:50%;left:50%;top:46%;transform:translate(-50%,-50%);pointer-events:none}.cover-orbit{position:absolute;border:1px solid #b99b5b30;border-radius:50%;pointer-events:none}
+.orbit-one{width:760px;height:760px}
+.orbit-two{width:920px;height:920px}
+.cover-content{
+    position:relative;
+    z-index:1;
+    width:min(100%,620px);
+    text-align:center;
+    display:flex;
+    align-items:center;
+    flex-direction:column
+}
+.cover-logo-wrap {
+    width: min(100%, 340px);
+    aspect-ratio: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    margin-bottom: 22px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
 
-.wordmark{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:700;letter-spacing:.09em;line-height:1;white-space:nowrap}.wordmark>span{color:var(--gold)}.wordmark small{display:block;margin-top:7px;font:600 .53rem 'DM Sans',sans-serif;letter-spacing:.25em;color:#aaa398}
+.cover-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: transparent;
+}
+.cover-content .eyebrow{
+    color:#8a6928;
+    margin-bottom:12px
+}
+.cover h1,.hero-section h1,.section-intro h2,.gallery-heading h2,.booking-banner h2,.contact-section h2,.profile-page h1,.step-heading h1,.booking-step>h1{
+    font-family:'Playfair Display',Georgia,serif;
+    font-weight:600;letter-spacing:-.045em;
+    line-height:1.02
+}
+.cover h1{font-size:clamp(3rem,8vw,5.7rem);margin:0}
+.cover h1 span{color:#96702b}
+.cover-copy{margin:18px 0 27px;color:#6e675c}
+.cover-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.cover-social{display:flex;gap:13px;align-items:center;margin-top:23px;font-size:.88rem;font-weight:600}
+.cover-social a{border-bottom:1px solid #a58a4d60;padding-bottom:3px}
+.cover-note{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:#8c8579;margin:25px 0 0}
+.cover-bottom{position:absolute;z-index:2;left:38px;right:38px;bottom:27px;display:flex;justify-content:space-between;align-items:center;color:#83765c;font-size:.65rem;letter-spacing:.15em}
+.cover-bottom span:first-child{font-family:Georgia,serif;font-size:1.2rem;color:#9a762f}
+/* Cabeçalho e site principal */
+.site-body{background:var(--black);color:#f8f5ee}
+.site-header{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 clamp(20px,5vw,76px);background:#111110f2;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(14px)}
+
+.wordmark{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:700;letter-spacing:.09em;line-height:1;white-space:nowrap}.wordmark>span{color:var(--gold)}
+.wordmark small{display:block;margin-top:7px;font:600 .53rem 'DM Sans',sans-serif;letter-spacing:.25em;color:#aaa398}
 /* Logo da Barbearia Campos no cabeçalho */
 .site-header .wordmark {
     display: flex;
